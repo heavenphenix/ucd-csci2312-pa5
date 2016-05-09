@@ -15,9 +15,10 @@
 #include <iterator>
 #include <initializer_list>
 
-namespace CS2312 {
+namespace CS2312 
+{
 
-    template <typename T>
+    template <typename s>
     class fixed_array {
 
     public:
@@ -29,9 +30,9 @@ namespace CS2312 {
         public:
 
             typedef iterator self_type;
-            typedef T value_type;
-            typedef T& reference;
-            typedef T* pointer;
+            typedef s value_type;
+            typedef s& reference;
+            typedef s* pointer;
             typedef std::forward_iterator_tag iterator_category;
             typedef size_type difference_type;
 
@@ -54,9 +55,9 @@ namespace CS2312 {
         public:
 
             typedef const_iterator self_type;
-            typedef T value_type;
-            typedef T& reference;
-            typedef T* pointer;
+            typedef s value_type;
+            typedef s& reference;
+            typedef s* pointer;
             typedef std::forward_iterator_tag iterator_category;
             typedef size_type difference_type;
 
@@ -77,13 +78,13 @@ namespace CS2312 {
 
         fixed_array(size_type size);
 
-        fixed_array(std::initializer_list<T> list);
+        fixed_array(std::initializer_list<s> list);
 
         ~fixed_array();
 
         size_type size() const;
 
-        T& operator[](size_type index);
+        s& operator[](size_type index);
 
         const T& operator[](size_type index) const;
 
@@ -97,7 +98,7 @@ namespace CS2312 {
 
     private:
 
-        T* __data;
+        s* __data;
         size_type __size;
 
     };
