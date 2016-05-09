@@ -1,5 +1,11 @@
-#include <iostream>
+//
+// by David Lam
+// 05.07.16
+// main.cpp
+//
+
 #include <fstream>
+#include <iostream>
 #include <sstream>
 #include <vector>
 
@@ -11,7 +17,8 @@ using std::endl;
 
 using namespace Testing;
 
-int main() {
+int main() 
+{
 
     const int NumIters = 3;
 
